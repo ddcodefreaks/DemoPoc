@@ -4,7 +4,7 @@ interface StringConcat {
 
     public String sconcat(String a, String b);
 }
-public class Example {
+public class InvokeLambdaWithTwoParameters {
 
    public static void main(String args[]) {
         // lambda expression with multiple arguments

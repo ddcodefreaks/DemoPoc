@@ -5,7 +5,7 @@ interface MyFunctionalInterface1 {
 	//A method with single parameter
     public int incrementByFive(int a);
 }
-public class Example2 {
+public class InvokeLambdaSingleParameter {
 
    public static void main(String args[]) {
         // lambda expression with single parameter num

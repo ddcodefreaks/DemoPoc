@@ -1,11 +1,11 @@
 package com.restful.webservices.restfulwebservices.poc.arraylistpoc;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
  * lambda expression works only with single abstract method interface called functional interface.
- * With Lambda expression compiler will create only 1 class file as below.
  * Lambda expressions are faster than the Anonymous classes as they are only executed when they are called.
  * @author dev_bhaskar
  *
@@ -13,7 +13,7 @@ import java.util.Map;
 public class LambdaExpressionPoc {
 	
 	/**
-	 * find the minimum value in array
+	 * find the minimum value in array using stream 
 	 * @param args
 	 */
 	
@@ -26,30 +26,36 @@ public class LambdaExpressionPoc {
 	    
 	    System.out.println("** Minimum value::"+ min);
 
-	   // assertEquals(7, min);
 	}
 	
 	/**
 	 * iterate over  map
-	 *
 	 * @param args
 	 */
-	public void iterateUsingStreamAPI(Map<String, Integer> map) {
+	public static void iterateMapStreamAPI() {
+		
+		Map<Integer, String> map = new HashMap<>();
+		map.put(1, "red");
+		map.put(1, "blue");
+		map.put(1, "green");
+		map.put(1, "yellow");
+		map.put(1, "pink");
+		
 	    map.entrySet().stream()
-	      // ...
 	      .forEach(e -> System.out.println(e.getKey() + ":" + e.getValue()));
 	}
 	
+	
 	public static void main(String[] args) {
 		
-		// start a thread by lambda expression
-		
-		/*Runnable runnable = ()-> System.out.println("Lambda Expression");
-		
-		Thread thread = new Thread(runnable);
-		thread.start();*/
-		
 		whenArrayIsOfIntegerThenMinUsesIntegerComparator();
+		iterateMapStreamAPI();
+
+		// start a thread by lambda expression
+		Runnable runnable = () -> System.out.println("Lambda Expression");
+		Thread thread = new Thread(runnable);
+		thread.start();
+		 
 	}
 
 }

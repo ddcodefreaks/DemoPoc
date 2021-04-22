@@ -5,7 +5,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.sun.el.stream.Optional;
+/**
+ * Poc class created for array list data processing
+ * @author dev_bhaskar
+ *
+ */
 
 public class ArrListDemo1 {
 	
@@ -16,6 +20,7 @@ public class ArrListDemo1 {
 	 */
 	
 	public static void addColors() {
+		
 		List<String> colors = new ArrayList<>();
 		
 		colors.add("Red");
@@ -25,12 +30,12 @@ public class ArrListDemo1 {
 		colors.add("White");
 		
 		// ways to iterate over list
-		/*System.out.println(colors);
+		System.out.println(colors);
 		for (String element : colors) {
 			System.out.println(element);
 		}
 		colors.stream().forEach(obj-> System.out.println(obj));
-		colors.stream().forEach(System.out::println);*/
+		colors.stream().forEach(System.out::println);
 		colors.forEach(System.out::println);
 		
 	}
@@ -118,10 +123,10 @@ public class ArrListDemo1 {
 	
 	public static void main(String[] args) {
 		addColors();
-		//insertFirstPosition();
-		//searchForElement();
-		//findDistinct();
-		//sortingList();
+		insertFirstPosition();
+		searchForElement();
+		findDistinct();
+		sortingList();
 		
 	}
 

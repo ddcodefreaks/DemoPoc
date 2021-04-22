@@ -10,7 +10,7 @@ import com.restful.webservices.restfulwebservices.testbeans.Employee;
 import com.restful.webservices.restfulwebservices.testbeans.User;
 
 /**
- * https://howtodoinjava.com/java/sort/collections-sort/ -- creating some custom
+ * 
  * sorting techniques
  * 
  * @author dev_bhaskar
@@ -87,7 +87,7 @@ public class CustomSortingList {
 
 	public static void main(String[] args) {
 
-		//sortEmployeeById();
+		sortEmployeeById();
 		sortUser();
 	}
 

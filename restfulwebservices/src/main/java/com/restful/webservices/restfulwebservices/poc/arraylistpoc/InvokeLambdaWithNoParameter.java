@@ -6,7 +6,7 @@ interface MyFunctionalInterface {
 	//A method with no parameter
     public String sayHello();
 }
-public class Example1NoParameter {
+public class InvokeLambdaWithNoParameter {
 
    public static void main(String args[]) {
         // lambda expression

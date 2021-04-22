@@ -6,39 +6,42 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.restful.webservices.restfulwebservices.testbeans.HelloWorldBean;
 
+/**
+ * controller class to handle request and response
+ * @author dev_bhaskar
+ *
+ */
+
+
 @RestController
 public class HelloWorldController {
 	
 	
 	
 	/**
-	 * create a get method helloWorld
-	 * URI- /hello-world
-	 * http type - GET method 
+	 * create a get method helloWorld URI- /hello-world http type - GET method
 	 */
 	@GetMapping("/hello-world")
 	public String helloWorld() {
-		return "hello-bhaskaryacharya";
+		return "hey!how you doing mate!";
 	}
-	
-	
+
 	/**
-	 * create a method helloWordBean which returns a bean
-	 * uri -- hello-world-bean
-	 * return type -- bean 
+	 * create a method helloWordBean which returns a bean uri -- hello-world-bean
+	 * return type -- bean
 	 */
 	@GetMapping("/hello-world-bean")
 	public HelloWorldBean helloWorldBean() {
-		return new  HelloWorldBean("Hello-World-bean");
+		return new HelloWorldBean("Hello-World-bean");
 	}
-	
+
 	/**
-	 * example of path variable for the same get request 
+	 * example of path variable for the same get request
 	 */
 
 	@GetMapping("/hello-world/{name}")
 	public HelloWorldBean helloWorlPathVariable(@PathVariable String name) {
-		return new  HelloWorldBean(String.format("Hello World,%s", name));
+		return new HelloWorldBean(String.format("Hello World,%s", name));
 	}
 	
 
