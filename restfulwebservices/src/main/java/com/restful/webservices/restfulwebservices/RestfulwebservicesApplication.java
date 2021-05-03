@@ -3,6 +3,11 @@ package com.restful.webservices.restfulwebservices;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+/**
+ * Main class
+ * @author dev_bhaskar
+ *
+ */
 @SpringBootApplication
 public class RestfulwebservicesApplication {
 
