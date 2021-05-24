@@ -18,8 +18,11 @@ import com.restful.webservices.restfulwebservices.testbeans.User;
 public class UserController {
 	
 	@Autowired
-	private UserDaoService userDaoService;
+	private UserDaoService userDaoService; 
 	
+	public void setUserDaoService(UserDaoService userDaoService) {
+		this.userDaoService = userDaoService;
+	}
 	
 	/**
 	 * create a get method to fetch user entries 
@@ -36,6 +39,20 @@ public class UserController {
 			e.printStackTrace();
 		}
 		return user;
+	}
+	
+	public int getResult(int x, int y) {
+		System.out.println("inside getResult method");
+		int result = userDaoService.getSum(x,y);
+		
+		return result;
+	}
+	
+	public int getResult() {
+		System.out.println("inside getResult method wid no args");
+		int result = userDaoService.getSum();
+		
+		return result+10;
 	}
 
 }

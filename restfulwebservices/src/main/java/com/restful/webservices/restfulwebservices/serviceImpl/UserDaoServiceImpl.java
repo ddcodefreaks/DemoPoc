@@ -3,6 +3,8 @@ package com.restful.webservices.restfulwebservices.serviceImpl;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.restful.webservices.restfulwebservices.service.UserDaoService;
 import com.restful.webservices.restfulwebservices.testbeans.User;
@@ -15,7 +17,7 @@ import com.restful.webservices.restfulwebservices.testbeans.User;
 
 @Service
 public class UserDaoServiceImpl implements UserDaoService {
-
+	
 	@Override
 	public List<User> intializeData() {
 		
@@ -31,6 +33,18 @@ public class UserDaoServiceImpl implements UserDaoService {
 		}
 		
 		return user;
+	}
+
+	@Override
+	public int getSum(int x, int y) {
+		System.out.println(" getSum method called value::"+ Integer.valueOf(x+y));
+		return x+y;
+	}
+
+	@Override
+	public int getSum() {
+		System.out.println(" getSum method called with no argument");
+		return 10;
 	}
 
 }

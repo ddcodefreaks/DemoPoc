@@ -13,4 +13,7 @@ public interface UserDaoService {
 	
 	public List<User> intializeData();
 	
+	public int getSum(int x, int y);
+	public int getSum();
+	
 }
